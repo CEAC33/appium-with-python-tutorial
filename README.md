@@ -21,3 +21,24 @@ Pre-requisite for Windows and MAC OSX:
 ```
 brew install android-platform-tools
 ```
+
+### Useful mirroring tool for Android devices
+
+```
+brew install scrcpy
+```
+
+Connect your cellphone to the PC and run the command
+
+```
+scrcpy
+```
+
+## Intro
+
+### Updating to Appium 2.0 Python client
+
+```
+pip install Appium-Python-Client==2.1.2
+```
+
