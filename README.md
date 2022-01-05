@@ -59,3 +59,57 @@ print(driver.title)
 time.sleep(2)
 driver.quit()
 ```
+
+## Different ways to starting appium server
+
+## Automating Native Apps
+
+### Automating Dialer App - Making a phone call
+
+```
+adb devices
+```
+
+```
+adb shell
+```
+
+```
+dumpsys window windows | grep -E 'mTopActivityComponent'
+```
+
+```python
+from appium import webdriver
+import time
+
+desired_caps = dict(
+    deviceName="Android",
+    platformName="Android",
+    appPackage="com.android.dialer",
+    appActivity=".BBKTwelveKeyDialer"
+    
+)
+
+driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
+
+time.sleep(2)
+driver.quit()
+```
+
+```python
+from appium import webdriver
+import time
+
+desired_caps = dict(
+    deviceName="Android",
+    platformName="Android",
+    appPackage="com.zhiliaoapp.musically",
+    appActivity="com.ss.android.ugc.aweme.main.MainActivity"
+    
+)
+
+driver = webdriver.Remote("http://127.0.0.1:4723/wd/hub", desired_caps)
+
+time.sleep(2)
+driver.quit()
+```
